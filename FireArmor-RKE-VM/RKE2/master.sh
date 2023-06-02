@@ -71,11 +71,11 @@ function connect_to_nodes() {
 
     # Once master1 is ready, start the rest of the nodes
     echo "Starting master2..."
-    sshpass -p "$password" ssh -tt $hostname@$ip_master2 "echo $password | sudo -S bash -c '$(declare -f configure_master2); configure_master2'"
+    sshpass -p "$password" ssh -tt $hostname@$ip_master2 "echo $password | sudo -S bash -c '$(declare -f configure_master2 install_kube_vip); configure_master2; install_kube_vip'"
     echo "master2 is ready"
     
     echo "Starting master3..."
-    sshpass -p "$password" ssh -tt $hostname@$ip_master3 "echo $password | sudo -S bash -c '$(declare -f configure_master2); configure_master2'"
+    sshpass -p "$password" ssh -tt $hostname@$ip_master3 "echo $password | sudo -S bash -c '$(declare -f configure_master2 install_kube_vip); configure_master2; install_kube_vip'"
     echo "master3 is ready"
 
     echo "Starting worker1..."
