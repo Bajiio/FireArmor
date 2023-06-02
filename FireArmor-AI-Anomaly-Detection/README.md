@@ -1,10 +1,10 @@
 # FireArmor-AI-Anomaly-Detection
 
-## Prérequis
-  1. Python 3.7 ou supérieur
-  2. Bibliothèques Python: numpy, pandas, scikit-learn, matplotlib, seaborn
-  3. Dataset ADFA-LD (disponible dans le github)
-
+## Prerequisites
+  
+1. Python 3.7 or higher
+ 2. Python libraries: numpy, pandas, scikit-learn, matplotlib, seaborn
+ 3. Dataset ADFA-LD (available in github)
 
 ## Introduction
 The ADFA-LD (Advanced Data Mining and Its Applications Lab Dataset) is a dataset containing information on Linux system calls. It has been designed for anomaly detection research and is often used to test machine learning models.
