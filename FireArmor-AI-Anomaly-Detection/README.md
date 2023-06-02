@@ -22,7 +22,7 @@ To launch the python scripts, go to the github repository source, as the paths a
 
 Before you start, make sure you've downloaded the ADFA-LD dataset. The files required for this model are train.csv and validation_data.csv. Place these files in the appropriate directory.
 
-If you don't have the train.csv file, you can create it using the InputData.py script. This script is responsible for creating the train.csv file from the raw trace files. Make sure you have the necessary raw trace files and run the script to generate the train.csv file.
+If you don't have the train.csv file, you can create it using the `InputData.py` script. This script is responsible for creating the `train.csv` file from the raw trace files. Make sure you have the necessary raw trace files and run the script to generate the train.csv file.
 
 The train.csv file contains the training data required to form the anomaly detection model. Once you've created the train.csv file, you can place it in the appropriate directory and run the rest of the code to create and evaluate the model.
 ### 3. Code execution
