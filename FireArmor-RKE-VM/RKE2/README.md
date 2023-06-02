@@ -9,7 +9,7 @@ This README provides a set of commands to set up a Kubernetes cluster using RKE2
 
 1. Connect to each node via SSH as the root user
 
-# On master1 :
+## On master1 :
 
 
  2. Create a file named `master.yaml` and copy the following content into it:
@@ -67,7 +67,7 @@ This README provides a set of commands to set up a Kubernetes cluster using RKE2
 
 # Kube-VIP Installation
 
-# Set up environment
+## Set up environment
 
 
     curl -s https://kube-vip.io/manifests/rbac.yaml > /var/lib/rancher/rke2/server/manifests/kube-vip-rbac.yaml
@@ -111,7 +111,7 @@ This README provides a set of commands to set up a Kubernetes cluster using RKE2
 > K1072d3bd38fb9dcfd7283ff63bcec4b2cf9aab7e9150871a5450abc69aabb30296::server:24ff086eee4c88db2a603250b4ddc0f8
 
 
-# Master 2
+## Master 2
 
     cat > master.yaml<<'EOF'
     token: K1072d3bd38fb9dcfd7283ff63bcec4b2cf9aab7e9150871a5450abc69aabb30296::server:24ff086eee4c88db2a603250b4ddc0f8
@@ -125,7 +125,7 @@ This README provides a set of commands to set up a Kubernetes cluster using RKE2
     - cilium
     EOF
 
-## Add in the `~/.bashrc` : 
+### Add in the `~/.bashrc` : 
 
     ```
     cat << EOF >> ~/.bashrc
@@ -150,9 +150,9 @@ This README provides a set of commands to set up a Kubernetes cluster using RKE2
     systemctl start rke2-server
     kubectl get nodes
 
-### Kube-VIP Installation
+## Kube-VIP Installation
 
-#### Set up environment
+### Set up environment
 
 
     curl -s https://kube-vip.io/manifests/rbac.yaml > /var/lib/rancher/rke2/server/manifests/kube-vip-rbac.yaml
@@ -172,13 +172,13 @@ This README provides a set of commands to set up a Kubernetes cluster using RKE2
 
 
 
-# On master1 :
+## On master1 :
 
     kubectl get nodes -w
     k get po -n kube-system | grep kube-vip
     k logs kube-vip-ds-9lmkl -n kube-system --tail 1
 
-# on Master2:
+## on Master2:
 
     cp /etc/rancher/rke2/rke2.yaml .
     nano rke2.yaml
