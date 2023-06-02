@@ -1,0 +1,2 @@
+[workspace]
+members = ["my-app", "my-app-common", "xtask"]
